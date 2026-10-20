@@ -1,0 +1,7 @@
+/learner/
+/.codex/
+.env
+.env.*
+*.log
+.DS_Store
+Thumbs.db

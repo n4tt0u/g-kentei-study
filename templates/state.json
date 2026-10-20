@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "method_version": "0.1.0",
+  "current_topic_id": "T01",
+  "last_explained_concept": null,
+  "next_concept": "AIとは何か",
+  "status": "not_started",
+  "pending_question_id": null,
+  "next_question_number": 1,
+  "review_candidates": [],
+  "syllabus": {"name": "シラバス2024", "version": "1.4", "verified_at": null, "url": "https://www.jdla.org/certificate/general/"},
+  "updated_at": null
+}
