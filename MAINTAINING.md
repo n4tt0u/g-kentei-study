@@ -12,3 +12,6 @@
 公開前は `git ls-files` に `learner/` や秘密情報が含まれないことを確認する。公式資料・他人の教材を同梱するときは配布条件を確認する。この初版はリンクのみで、第三者資料本文は同梱しない。
 
 公開先は https://github.com/n4tt0u/g-kentei-study 。公開リポジトリへ学習記録を追加しない。ライセンスはこの初版では未設定。
+
+
+カリキュラムの内容は learning/curriculum.md と curriculum.json、keyword-coverage.csv の参照を一致させる。テーマIDは安定させ、分割・統合時には新旧対応を添える。更新前に本人の進捗・誤答・日程・内部Source IDを本文やJSONから取り除く。個人履歴の照合は本人の環境内で learning/history-migration.md に従う。
