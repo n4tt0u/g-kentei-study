@@ -2,6 +2,8 @@
 
 対象はカリキュラムv1.0（444テーマ）以前から学習している利用者。本人の今の学習チャットで実行する。配布元の学習履歴・正誤・日程を流用しない。更新だけで新しい授業を始めない。
 
+説明・図だけを変更する0.2.1への更新は `learning/update-0.2.1.md` を使う。カリキュラム版は1.0のままで、既に履歴照合済みなら全テーマの再照合は不要。
+
 ## 1. 現在の記録を確保
 
 - 今のチャットと作業フォルダから `learner/state.json`、`answers.jsonl`、`questions/`、個人設定、計画、復習候補を読む。保存ファイル以外にチャットだけで回答している部分があれば、その本人の発言と実際の問題・採点を確認する。
@@ -20,7 +22,7 @@
 
 `learner/curriculum-progress.json` に以下を保存する（元の問題・回答イベントは変更しない）。
 
-- schema_version: 1、curriculum_version: "1.0"、method_version: "0.2.0"
+- schema_version: 1、curriculum_version: "1.0"、method_version: 現在適用する学習ルール版
 - mappings: 旧問題・説明ごとに、record_ref（ファイルとJSONの位置、または本人のチャット内で特定できる参照）、question_id、lesson_ids、coverage（full/partial/uncertain）、根拠の要約。参照を捏造しない。
 - lessons: 444個のテーマIDをキーとして、instruction（confirmed/partial/unknown/not_started）、assessment（correct/incorrect/pending/invalid/unknown/not_attempted）、feedback（confirmed/unknown/not_given）、first_pass_complete、retention（confirmed/unconfirmed）、review_required、evidence_refs を記録する。
 - unresolved: 曖昧な対応・不足している記録・未確認の分割先を列挙。

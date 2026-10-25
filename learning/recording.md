@@ -20,7 +20,7 @@
 
 1. 前の未回答問題がないか確認。あれば同じID・本文・選択肢を再提示できるようにする。
 2. 次のID `G-0001` 等を割り当てる。IDは保存済みの問題と重複させない。
-3. 問題ごとに `learner/questions/<ID>.json` を作る。新規問題の必須項目は id、topic_id（単元ID）、lesson_id（T01-01等）、concept、kind（initial/review）、original_question_id（復習元かnull）、stem、options（A〜D）、correct_option、explanations（A〜D）、sources、created_at。sourcesはURL・資料名・版・実際の確認日を含む。作成日時は取得可能な実時刻を使い、分からなければnullとする。
+3. 問題ごとに `learner/questions/<ID>.json` を作る。新規問題の必須項目は id、topic_id（単元ID）、lesson_id（T01-01等）、concept、kind（initial/review）、original_question_id（復習元かnull）、stem、options（本人の選択肢ラベル。未指定ならA〜D）、correct_option、explanations（A〜D）、sources、created_at。sourcesはURL・資料名・版・実際の確認日を含む。作成日時は取得可能な実時刻を使い、分からなければnullとする。
 4. `state.json` の pending_question_id と next_question_number、last_explained_concept、status を更新してから問題を提示する。正解はファイルに保存するが回答前のチャットには出さない。これは厳密な試験用の解答秘匿機構ではない。
 
 ## 回答時
@@ -38,3 +38,6 @@
 学習ルールの版はstateのmethod_versionへ記録する。版が変わっても既存履歴を消さない。形式移行が必要なら原本を同じ非公開領域へバックアップし、明示的な移行を行う。単なる配布更新でtemplatesを既存learnerへコピーし直さない。
 
 保存に失敗したらその旨を伝え、問題ID・回答・再開位置をチャットへ示す。保存完了や次回の確実な復元を装わない。
+
+
+説明・図の更新だけなら `learning/update-0.2.1.md` に従う。本人が選んだ選択肢のラベルや既存のoptions・正解キーを、共有版の既定値に合わせて改名しない。新規問題も `learning/settings.md` に従って採用済み形式で作る。

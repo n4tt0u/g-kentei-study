@@ -15,3 +15,6 @@
 
 
 カリキュラムの内容は learning/curriculum.md と curriculum.json、keyword-coverage.csv の参照を一致させる。テーマIDは安定させ、分割・統合時には新旧対応を添える。更新前に本人の進捗・誤答・日程・内部Source IDを本文やJSONから取り除く。個人履歴の照合は本人の環境内で learning/history-migration.md に従う。
+
+
+0.2.1の説明・図の更新には learning/update-0.2.1.md を使う。相手の採用済み出題・進行設定は learning/settings.md を優先し、共有版の既定値に戻さない。個人設定を共有ファイルへ直接書いていた場合も、差分を破棄せず個人設定へ統合する。未回答問題のキーや履歴のラベルを変換しない。
